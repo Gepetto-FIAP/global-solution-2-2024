@@ -27,8 +27,7 @@ export default function LoginEstabelecimentoView({
             &lt; Voltar
           </Link>
           <h1 className="text-4xl mb-4 font-bold">
-            Área do <br />
-            estabelecimento
+            Conta para descartar
           </h1>
           <form className="flex flex-col" onSubmit={handleLogin}>
             <Input
