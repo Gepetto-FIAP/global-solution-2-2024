@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import photo from "@/public/assets/images/login-helper.jpg";
+import photo from "@/public/assets/images/login-estabelecimento.jpg";
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Input } from "@/components/Input";
