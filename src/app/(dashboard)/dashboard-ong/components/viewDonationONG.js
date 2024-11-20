@@ -8,9 +8,9 @@ if (!isOpen) return null;
 
 const donation = GetDonation(donationID);
 const type = {
-  perecivel: "Alimentos Perecíveis",
-  "nao-perecivel": "Alimentos Não perecíveis",
-  ambos: "Alimentos Perecíveis e Não Perecíveis",
+  perecivel: "Somente pilhas",
+  "nao-perecivel": "Baterias mais complexas",
+  ambos: "Todo e qualquer tipo de bateria",
 };
 
 const calculateTotalByUnit = (items) => {
@@ -43,19 +43,19 @@ return (
   >
     <div className="bg-white rounded-[24px] w-[678px] p-12 relative max-h-[90vh] overflow-auto">
       <button
-        className="absolute top-4 right-4 text-gray-400 text-2xl hover:text-[#FF9800]"
+        className="absolute top-4 right-4 text-gray-400 text-2xl hover:text-[#008E28]"
         onClick={onClose}
       >
         &times;
       </button>
-      <h2 className="text-[32px] font-bold text-[#FF9800] mb-4 text-center">
-        Visualizar doação
+      <h2 className="text-[32px] font-bold text-[#008E28] mb-4 text-center">
+        Visualizar descarte
       </h2>
       <form className="my-8">
         <div className="flex gap-x-4 mb-4 flex-col">
           <div className="mb-4 w-[60%]">
             <label className="mb-4 text-sm font-semibold text-black">
-              Tipo de alimento
+              Tipo de bateria
             </label>
             <input
               type="text"
@@ -109,7 +109,7 @@ return (
         <div className="grid grid-cols-[1fr_58px_94px] gap-4">
           <label className="text-black col-start-1 col-end-4">
             <span className="mb-4 text-sm font-semibold text-black">
-              Lista de alimentos
+              Lista de materias
             </span>
           </label>
           {donation.items.map((item, index) => (
@@ -139,7 +139,7 @@ return (
         <div className="my-8 flex gap-4">
           <div className="w-auto">
             <label className="block text-sm font-semibold text-black mb-1">
-              Horário da doação
+              Horário do descarte
             </label>
             <input
               type="date"
