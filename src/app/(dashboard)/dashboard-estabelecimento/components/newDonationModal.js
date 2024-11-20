@@ -1,5 +1,5 @@
 "use client";
-
+//não usado por enquanto 20/11/2024
 export default function NewDonationModal({
   isOpen,
   onClose,
@@ -21,15 +21,15 @@ export default function NewDonationModal({
         >
           &times;
         </button>
-        <h2 className="text-xl font-semibold text-orange-500 mb-4 text-center">
-          Cadastrar nova doação
+        <h2 className="text-xl font-semibold text-[#008E28]-500 mb-4 text-center">
+          Cadastrar nova 
         </h2>
         <form>
           <div className="mb-4">
             <label className="block text-sm font-semibold text-black mb-1">
               Tipo de alimento*
             </label>
-            <select className="w-full border-gray-300 border-2 text-gray-400 rounded-md shadow-sm px-2 py-3 focus:border-orange-500 focus:ring-orange-500">
+            <select className="w-full border-gray-300 border-2 text-gray-400 rounded-md shadow-sm px-2 py-3 focus:border-[#008E28]-500 focus:ring-[#008E28]-500">
               <option value="" disabled selected hidden>
                 Selecione um tipo de alimento
               </option>
@@ -46,7 +46,7 @@ export default function NewDonationModal({
             <input
               type="text"
               placeholder="Exemplo: 4kg"
-              className="w-full p-2 border-gray-300 border-2 text-gray-400 rounded-lg shadow-sm focus:border-orange-500 focus:ring-orange-500"
+              className="w-full p-2 border-gray-300 border-2 text-gray-400 rounded-lg shadow-sm focus:border-[#008E28]-500 focus:ring-[#008E28]-500"
             />
           </div>
 
@@ -55,7 +55,7 @@ export default function NewDonationModal({
               Lista de alimentos*
             </label>
             <input type="file" className="hidden" />
-            <label className="w-full cursor-pointer flex border border-dashed text-gray-400 border-gray-300 rounded-lg p-2 focus:border-orange-500 focus:ring-orange-500">
+            <label className="w-full cursor-pointer flex border border-dashed text-gray-400 border-gray-300 rounded-lg p-2 focus:border-[#008E28]-500 focus:ring-[#008E28]-500">
               Escolher arquivo
             </label>
             <p className="text-sm text-gray-400">Apenas .csv ou .xls</p>
@@ -68,7 +68,7 @@ export default function NewDonationModal({
               </label>
               <input
                 type="date"
-                className="w-full  border-gray-300 border-2 text-gray-400 p-2 rounded-lg shadow-sm focus:border-orange-500 focus:ring-orange-500"
+                className="w-full  border-gray-300 border-2 text-gray-400 p-2 rounded-lg shadow-sm focus:border-[#008E28]-500 focus:ring-[#008E28]-500"
               />
             </div>
             <div className="w-1/2">
@@ -77,7 +77,7 @@ export default function NewDonationModal({
               </label>
               <input
                 type="time"
-                className="w-full  border-gray-300 border-2 text-gray-400 p-2 rounded-lg shadow-sm focus:border-orange-500 focus:ring-orange-500"
+                className="w-full  border-gray-300 border-2 text-gray-400 p-2 rounded-lg shadow-sm focus:border-[#008E28]-500 focus:ring-[#008E28]-500"
               />
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function NewDonationModal({
             <button
               type="button"
               onClick={CreateDonationAndListOngs}
-              className="bg-orange-500 text-white font-semibold py-2 px-7 rounded-lg hover:bg-orange-600"
+              className="bg-[#008E28]-500 text-white font-semibold py-2 px-7 rounded-lg hover:bg-[#008E28]-600"
             >
               Ver Lista de ONGs
             </button>

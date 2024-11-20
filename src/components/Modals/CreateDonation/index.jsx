@@ -12,11 +12,11 @@ export function CreateDonation({ isOpen, onClose, toggleList }) {
 
   const handleToggleList = () => {
     if (!createdDonation.type) {
-      return alert("Selecione o tipo de alimento para continuar");
+      return alert("Selecione o tipo de bateria para continuar");
     }
 
     if (!createdDonation.items) {
-      return alert("Adicione pelo menos um alimento para continuar");
+      return alert("Adicione pelo menos uma bateria para continuar");
     }
 
     if (!createdDonation.data || !createdDonation.time) {
@@ -37,19 +37,19 @@ export function CreateDonation({ isOpen, onClose, toggleList }) {
       >
         <div className="bg-white rounded-[24px] w-[678px] p-12 relative max-h-[90vh] overflow-auto z-50">
           <button
-            className="absolute top-4 right-4 text-gray-400 text-2xl hover:text-[#FF9800]"
+            className="absolute top-4 right-4 text-gray-400 text-2xl hover:text-[#008E28]"
             onClick={onClose}
           >
             &times;
           </button>
-          <h2 className="text-[32px] font-bold text-[#FF9800] mb-4 text-center">
-            Cadastrar nova doação
+          <h2 className="text-[32px] font-bold text-[#008E28] mb-4 text-center">
+            Cadastrar novo descarte
           </h2>
           <form className="mt-8">
             <div className="flex gap-x-4 mb-4">
               <div className="mb-4">
                 <Select
-                  label="Tipo de alimento"
+                  label="Tipo de bateria"
                   id="tipo-alimento"
                   required
                   onChange={(event) =>
@@ -60,16 +60,16 @@ export function CreateDonation({ isOpen, onClose, toggleList }) {
                   }
                 >
                   <option defaultValue="" disabled selected hidden>
-                    Selecione o tipo de alimento
+                    Selecione o tipo de bateria
                   </option>
                   <option value="perecivel">
-                    Somente Alimentos Perecíveis
+                    Somente pilhas
                   </option>
                   <option value="nao-perecivel">
-                    Somente Alimentos Não Perecíveis
+                    Bateria mais complexas
                   </option>
                   <option value="ambos">
-                    Alimentos Perecíveis e Não Perecíveis
+                    Todo e qualquer tipo de bateria
                   </option>
                 </Select>
               </div>
@@ -80,11 +80,11 @@ export function CreateDonation({ isOpen, onClose, toggleList }) {
             <div className="my-8 flex gap-4">
               <div className="w-auto">
                 <label className="block text-sm font-semibold text-black mb-1">
-                  Horário da doação
+                  Horário do descarte
                 </label>
                 <input
                   type="date"
-                  className="border-gray-300 border-2 text-gray-400 p-2 rounded-lg shadow-sm focus:border-orange-500 focus:ring-orange-500"
+                  className="border-gray-300 border-2 text-gray-400 p-2 rounded-lg shadow-sm focus:border-green-500 focus:ring-green-500"
                   required
                   onChange={(event) =>
                     setCreatedDonation({
@@ -97,7 +97,7 @@ export function CreateDonation({ isOpen, onClose, toggleList }) {
               <div className="w-auto self-end">
                 <input
                   type="time"
-                  className="border-gray-300 border-2 text-gray-400 p-2 rounded-lg shadow-sm focus:border-orange-500 focus:ring-orange-500"
+                  className="border-gray-300 border-2 text-gray-400 p-2 rounded-lg shadow-sm focus:border-green-500 focus:ring-green-500"
                   required
                   onChange={(event) =>
                     setCreatedDonation({
@@ -110,7 +110,7 @@ export function CreateDonation({ isOpen, onClose, toggleList }) {
             </div>
             <div className="w-full flex justify-end">
               <Button
-                text="Ver lista de ONGs"
+                text="Ver Estabelecimentos"
                 type="button"
                 onClick={() => handleToggleList()}
               />

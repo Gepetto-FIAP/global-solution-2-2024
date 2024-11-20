@@ -24,9 +24,9 @@ export function TableRow({
   if (status === "cancelado") formatedStatus = "Cancelado";
 
   let formatedType = "";
-  if (type === "perecivel") formatedType = "Perecível";
-  if (type === "nao-perecivel") formatedType = "Não perecível";
-  if (type === "ambos") formatedType = "Perecível e Não perecível";
+  if (type === "perecivel") formatedType = "Somente pilhas";
+  if (type === "nao-perecivel") formatedType = "Baterias mais complexas";
+  if (type === "ambos") formatedType = "Todo e qualquer tipo de bateria";
 
   const handleOpenViewModal = () => {
     setIsViewDonationModal(true);
@@ -53,7 +53,7 @@ export function TableRow({
           </p>
         </td>
         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600 text-right">
-          <button className="text-orange-500 hover:text-orange-600">
+          <button className="text-green-500 hover:text-green-600">
             <Image
               onClick={handleOpenViewModal}
               src="/assets/images/eye.svg"

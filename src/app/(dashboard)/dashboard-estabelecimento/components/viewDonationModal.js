@@ -7,9 +7,9 @@ export default function ViewDonationModal({ isOpen, onClose, donationID }) {
 
   const donation = GetDonation(donationID);
   const type = {
-    perecivel: "Alimentos Perecíveis",
-    "nao-perecivel": "Alimentos Não perecíveis",
-    ambos: "Alimentos Perecíveis e Não Perecíveis",
+    perecivel: "Somente pilhas",
+    "nao-perecivel": "Baterias mais complexas",
+    ambos: "Todo e qualquer tipo de bateria",
   };
 
   const calculateTotalByUnit = (items) => {
@@ -49,13 +49,13 @@ export default function ViewDonationModal({ isOpen, onClose, donationID }) {
         >
           &times;
         </button>
-        <h2 className="text-[32px] font-bold text-[#FF9800] mb-6 text-center">
+        <h2 className="text-[32px] font-bold text-[#008E28] mb-6 text-center">
           Visualizar doação
         </h2>
 
         <div className="mb-4">
           <label className="block text-sm font-semibold text-black mb-1">
-            Tipo de alimento
+            Tipo de descarte
           </label>
           <input
             type="text"
@@ -79,7 +79,7 @@ export default function ViewDonationModal({ isOpen, onClose, donationID }) {
 
         <div className="mb-4 grid grid-cols-[1fr_58px_94px] gap-4">
           <label className="text-black font-semibold col-start-1 col-end-4">
-            Lista de alimentos
+            Lista de materiais
           </label>
           {donation.items.map((item, index) => (
             <React.Fragment key={index}>
