@@ -50,7 +50,7 @@ export default function ViewDonationModal({ isOpen, onClose, donationID }) {
           &times;
         </button>
         <h2 className="text-[32px] font-bold text-[#008E28] mb-6 text-center">
-          Visualizar doação
+          Visualizar descarte
         </h2>
 
         <div className="mb-4">
