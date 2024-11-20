@@ -12,9 +12,9 @@ export function Button({
   ...props
 }) {
   const primaryStyle =
-    "bg-[#FF9800] hover:bg-[#C26100] text-white font-bold py-2 px-6 rounded duration-200 ease-in-out font-nunito-sans";
+    "bg-[#008E28] hover:bg-[#006403] text-white font-bold py-2 px-6 rounded duration-200 ease-in-out font-nunito-sans";
   const outlineStyle =
-    "border font-bold border-[#FF9800] text-[#FF9800] py-2 px-6 rounded hover:border-[#C26100] hover:text-[#C26100] duration-200 ease-in-out font-nunito-sans";
+    "border font-bold border-[#008E28] text-[#008E28] py-2 px-6 rounded hover:border-[#006403] hover:text-[#006403] duration-200 ease-in-out font-nunito-sans";
   const buttonStyle = variant === "outline" ? outlineStyle : primaryStyle;
 
   return (
