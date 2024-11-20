@@ -37,7 +37,7 @@ const Doar = () => {
           <h1 className="text-black text-4xl font-bold">
             {business.fantasyName}
           </h1>
-          <p className="text-black text-xl pb-12 pt-4">Lista de Doações</p>
+          <p className="text-black text-xl pb-12 pt-4">Lista de Descartes</p>
 
           <table className="w-4/5">
             <thead>
@@ -46,15 +46,15 @@ const Doar = () => {
                   STATUS
                 </th>
                 <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm font-semibold text-black">
-                  INFORMAÇÕES DA ONG
+                  INFORMAÇÕES DO ESTABELECIMENTO
                 </th>
                 <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm font-semibold text-black">
-                  SOBRE A DOAÇÃO
+                  SOBRE O DESCARTE
                 </th>
                 <th className="py-3 border-b-2 border-gray-300 text-right text-sm font-semibold">
                   <Button
                     onClick={() => setIsDonationModalOpen(true)}
-                    text="Nova doação"
+                    text="Novo Descarte"
                     className="-mr-[2px]"
                   />
                 </th>
@@ -79,7 +79,7 @@ const Doar = () => {
               ) : (
                 <tr className="text-center text-2xl text-gray-500 font-semibold">
                   <td colSpan="5" className="pt-5">
-                    Nenhuma doação cadastrada! 😥
+                    Nenhum descarte cadastrado! 😥
                   </td>
                 </tr>
               )}

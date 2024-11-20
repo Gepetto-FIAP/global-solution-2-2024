@@ -29,9 +29,9 @@ export function OngTableRow({
   if (status === "cancelado") formatedStatus = "Cancelado";
 
   let formatedType = "";
-  if (type === "perecivel") formatedType = "Perecíveis";
-  if (type === "nao-perecivel") formatedType = "Não perecíveis";
-  if (type === "ambos") formatedType = "Perecíveis e Não perecíveis";
+  if (type === "perecivel") formatedType = "Somente pilhas";
+  if (type === "nao-perecivel") formatedType = "Baterias mais complexas";
+  if (type === "ambos") formatedType = "Todo e qualquer tipo de bateria";
 
   const calculateTotalByUnit = (items) => {
     return items.reduce((acc, item) => {
