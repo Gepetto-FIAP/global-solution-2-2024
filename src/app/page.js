@@ -17,14 +17,14 @@ export default function LandingPage() {
       <header className="absolute top-0 left-0 w-full bg-white/10 backdrop-blur-sm z-20 p-4">
         <div className="container mx-auto flex justify-between items-center">
           <Image
-            src="/assets/images/fome-zero-logo.png"
+            src="/assets/images/logo.png"
             width={53}
             height={58}
-            alt="Fome Zero"
+            alt="Logo"
           />
           <div>
             <Link href={doarRef}>
-              <Button text="Doar Agora" variant="primary" />
+              <Button text="Login" variant="primary" />
             </Link>
           </div>
         </div>
@@ -34,32 +34,31 @@ export default function LandingPage() {
         <div
           className="absolute inset-0 bg-cover z-0"
           style={{
-            backgroundImage: "url('/assets/images/home-lading-page.jpg')",
+            backgroundImage: "url('/assets/images/home-landing-page.jpg')",
           }}
         />
         <div className="container mx-auto text-left py-20 text-white relative z-10">
           <h2 className="text-6xl font-bold mb-4 max-w-[728px]">
-            Desperdício Zero,{" "}
-            <span className="text-[#FF9800]">Solidariedade Máxima:</span>{" "}
-            Compartilhe o que Sobra
+            Ache o local certo!{" "}
+            <span className="text-[#00DF3F]">Descarte baterias:</span>{" "}
+            Poupe o meio ambiente
           </h2>
           <p className="text-lg mb-8 max-w-[728px]">
-            Junte-se a nós para levar alimentos a quem precisa e fazer a
-            diferença na comunidade. Seu negócio pode alimentar milhares.
+            Encontramos o local ideal para você descartar ou vender suas baterias, desde uma simples pilha até baterias de carros elétricos.
           </p>
           <div className="flex flex-row gap-4">
             <Link href={doarRef}>
-              <Button text="Doar Agora" variant="primary" />
+              <Button text="Descartar" variant="primary" />
             </Link>
 
             <Link href={ongRef}>
-              <Button text="Área da Ong" variant="outline" />
+              <Button text="Receber" variant="outline" />
             </Link>
           </div>
         </div>
       </main>
 
-      <section className="bg-[#FF9800] text-white py-12 relative z-10">
+      {/* <section className="bg-[#FF9800] text-white py-12 relative z-10">
         <div className="bg-white rounded-full w-[48px] h-[48px] flex justify-center items-center absolute -top-6 left-1/2 transform -translate-x-1/2 shadow">
           <Image
             src="/assets/images/garfo.svg"
@@ -134,10 +133,10 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <footer className="bg-[#191919] text-white py-4 text-center relative z-10 font-nunito-sans">
-        <p>&copy; 2024 Fome Zero. Todos os direitos reservados.</p>
+      <footer className="bg-[#008E28] text-white py-4 text-center relative z-10 font-nunito-sans">
+        <p>&copy; 2024. Todos os direitos reservados.</p>
       </footer>
     </div>
   );
