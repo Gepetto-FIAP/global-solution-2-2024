@@ -43,7 +43,7 @@ export default function UpdateDonation({ isOpen, onClose, donationID }) {
           &times;
         </button>
         <h2 className="text-[32px] font-bold text-[#008E28] mb-4 text-center">
-          Atualizar doação
+          Atualizar Descarte
         </h2>
 
         <div className="flex flex-col items-center">
@@ -51,7 +51,7 @@ export default function UpdateDonation({ isOpen, onClose, donationID }) {
             src="/assets/images/two-battery.png"
             height={120}
             width={183}
-            alt="doação de comida em desenho"
+            alt="duas baterias"
             className="text-center mb-8"
           />
 
@@ -77,11 +77,11 @@ export default function UpdateDonation({ isOpen, onClose, donationID }) {
           <Button variant="outline" text="Imprimir" />
 
           {donation.status === "em-aberto" && (
-            <Button onClick={handleAccept} text="Aceitar Doação" />
+            <Button onClick={handleAccept} text="Aceitar Descarte" />
           )}
 
           {donation.status === "processando" && (
-            <Button onClick={handleConclude} text="Concluir Doação" />
+            <Button onClick={handleConclude} text="Concluir Descarte" />
           )}
         </div>
       </div>
