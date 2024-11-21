@@ -4,13 +4,19 @@ import CadastrarEstabelecimentoView from "./view";
 import { useLogin } from "@/hooks/useLogin";
 
 export default function CadastrarEstabelecimento() {
-  const { RegisterBusiness } = useLogin();
+  const { RegisterOng } = useLogin();
   const [institution, setInstitution] = useState({
-    fantasyName: "",
+    // fantasyName: "",
+    // cnpj: "",
+    // type: "",
+    // address: "",
+    // phone: "",
+    // email: "",
+    // password: "",
+    name: "",
+    nameReponsible: "",
     cnpj: "",
     type: "",
-    address: "",
-    phone: "",
     email: "",
     password: "",
   });
@@ -19,20 +25,19 @@ export default function CadastrarEstabelecimento() {
     e.preventDefault();
 
     const newInstitution = {
-      fantasyName: institution.fantasyName,
+      name: institution.name,
+      nameReponsible: institution.nameReponsible,
       cnpj: institution.cnpj,
-      type: institution.type,
-      address: institution.address,
-      phone: institution.phone,
+      type: institution.cnpj,
       email: institution.email,
       password: institution.password,
     };
 
-    const wasRegistered = RegisterBusiness(newInstitution);
+    const wasRegistered = RegisterOng(newInstitution);
 
     if (wasRegistered) {
       alert("Cadastrado com sucesso");
-      window.location.href = "/login-descartante";
+      window.location.href = "/login-estabelecimento";
     }
   };
   return (
