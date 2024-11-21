@@ -4,6 +4,7 @@ export function TableRow({
   status,
   ongName,
   ongEmail,
+  ongAddress,
   type,
   data,
   time,
@@ -45,6 +46,7 @@ export function TableRow({
         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
           <b>{ongName}</b>
           <p>{ongEmail}</p>
+          <p>{ongAddress}</p>
         </td>
         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
           <b>{formatedType}</b>

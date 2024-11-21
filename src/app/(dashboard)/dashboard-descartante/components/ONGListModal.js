@@ -6,7 +6,6 @@ import { useDonate } from "@/hooks/useDonate";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 
 export default function ONGListModal({ isOpen, onClose, toggleDonation }) {
-
   const { createdDonation, setCreatedDonation, RegisterDonation } = useDonate();
   const { getItem } = useLocalStorage("ongs");
   const { getItem: getBussines } = useLocalStorage("businessLogged");
@@ -35,7 +34,9 @@ export default function ONGListModal({ isOpen, onClose, toggleDonation }) {
           &times;
         </button>
         <div className="flex w-full justify-center items-center">
-          <h2 className="text-xl font-bold text-green-600">Lista de Estabelecimentos</h2>
+          <h2 className="text-xl font-bold text-green-600">
+            Lista de Estabelecimentos
+          </h2>
         </div>
 
         <div className="mt-8 space-y-4">
@@ -50,9 +51,9 @@ export default function ONGListModal({ isOpen, onClose, toggleDonation }) {
                   ongName: event.target.value,
                   ongID: ong.id,
                   ongEmail: ong.email,
+                  ongAddress: ong.address,
                   companyName: business.fantasyName,
                   companyCnpj: business.cnpj,
-                  companyAddress: business.address,
                   companyPhone: business.phone,
                 })
               }

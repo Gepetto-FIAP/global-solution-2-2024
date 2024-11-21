@@ -5,6 +5,7 @@
  * @property {string} nameResponsible
  * @property {string} cnpj
  * @property {string} type
+ * @property {string} address
  * @property {string} email
  * @property {string} password
  */

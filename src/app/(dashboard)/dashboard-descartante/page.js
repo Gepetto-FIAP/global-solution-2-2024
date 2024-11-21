@@ -68,6 +68,7 @@ const Doar = () => {
                     status={donation.status}
                     ongName={donation.ongName}
                     ongEmail={donation.ongEmail}
+                    ongAddress={donation.ongAddress}
                     type={donation.type}
                     data={donation.data}
                     time={donation.time}

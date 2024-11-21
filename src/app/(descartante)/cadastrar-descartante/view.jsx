@@ -60,16 +60,6 @@ export default function CadastrarEstabelecimentoView({
             />
 
             <Input
-              label="Endereço"
-              id="endereco"
-              placeholder="Insira seu endereço"
-              required
-              onChange={(e) =>
-                setInstitution({ ...institution, address: e.target.value })
-              }
-            />
-
-            <Input
               label="E-mail"
               type="email"
               id="email"

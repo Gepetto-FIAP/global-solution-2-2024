@@ -6,17 +6,11 @@ import { useLogin } from "@/hooks/useLogin";
 export default function CadastrarEstabelecimento() {
   const { RegisterOng } = useLogin();
   const [institution, setInstitution] = useState({
-    // fantasyName: "",
-    // cnpj: "",
-    // type: "",
-    // address: "",
-    // phone: "",
-    // email: "",
-    // password: "",
     name: "",
     nameReponsible: "",
     cnpj: "",
     type: "",
+    address: "",
     email: "",
     password: "",
   });
@@ -29,6 +23,7 @@ export default function CadastrarEstabelecimento() {
       nameReponsible: institution.nameReponsible,
       cnpj: institution.cnpj,
       type: institution.cnpj,
+      address: institution.address,
       email: institution.email,
       password: institution.password,
     };
