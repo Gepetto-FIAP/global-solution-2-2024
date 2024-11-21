@@ -16,7 +16,6 @@ export default function UpdateDonation({ isOpen, onClose, donationID }) {
   if (!isOpen) return null;
 
   const donation = GetDonation(donationID);
-  console.log(donation);
 
   const handleAccept = () => {
     UpdateDonationStatus(donationID, "processando");

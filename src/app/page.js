@@ -9,8 +9,12 @@ import { useLogin } from "@/hooks/useLogin";
 
 export default function LandingPage() {
   const { isBusinessLoggedIn, isOngLoggedIn } = useLogin();
-  const doarRef = isBusinessLoggedIn ? "/dashboard-estabelecimento" : "/login-estabelecimento";
-  const ongRef = isOngLoggedIn ? "/dashboard-ong" : "/login-ong";
+  const doarRef = isBusinessLoggedIn
+    ? "/dashboard-descartante"
+    : "/login-descartante";
+  const ongRef = isOngLoggedIn
+    ? "/dashboard-estabelecimento"
+    : "/login-estabelecimento";
 
   return (
     <div className="h-screen w-screen overflow-y-auto relative">
@@ -40,11 +44,12 @@ export default function LandingPage() {
         <div className="container mx-auto text-left py-20 text-white relative z-10">
           <h2 className="text-6xl font-bold mb-4 max-w-[728px]">
             Ache o local certo!{" "}
-            <span className="text-[#00DF3F]">Descarte baterias:</span>{" "}
-            Poupe o meio ambiente
+            <span className="text-[#00DF3F]">Descarte baterias:</span> Poupe o
+            meio ambiente
           </h2>
           <p className="text-lg mb-8 max-w-[728px]">
-            Encontramos o local ideal para você descartar ou vender suas baterias, desde uma simples pilha até baterias de carros elétricos.
+            Encontramos o local ideal para você descartar ou vender suas
+            baterias, desde uma simples pilha até baterias de carros elétricos.
           </p>
           <div className="flex flex-row gap-4">
             <Link href={doarRef}>
@@ -60,60 +65,69 @@ export default function LandingPage() {
 
       <section className="flex flex-col justify-center items-center bg-[#122417] text-white py-16 relative z-10">
         <h2 className="text-4xl font-bold mb-8">Conheça o nosso propósito</h2>
-        <iframe className="rounded-lg" width="800" height="533.33" src="https://www.youtube.com/embed/hTySFNbMiZo?si=wn_3Vz5vQj_ZqS5C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+          className="rounded-lg border-0"
+          width="800"
+          height="533.33"
+          src="https://www.youtube.com/embed/hTySFNbMiZo?si=wn_3Vz5vQj_ZqS5C"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
       </section>
       <section className="flex flex-col justify-center items-center bg-[#191919] text-white py-36 relative z-10">
         <h2 className="text-4xl font-bold mb-8">Conheça o nosso time</h2>
         <div id="integrantes" className="flex flex-row gap-8">
           <div id="integrante" className="text-center">
             <Image
-                src="/assets/images/integrantes/antonio.png"
-                width={180}
-                height={180}
-                alt="Logo"
-              />
-              <p className="text-green-500 mt-2">Antônio Schappo</p>
-              <p>rm0000</p>
+              src="/assets/images/integrantes/antonio.png"
+              width={180}
+              height={180}
+              alt="Logo"
+            />
+            <p className="text-green-500 mt-2">Antônio Schappo</p>
+            <p>rm0000</p>
           </div>
           <div id="integrante" className="text-center">
             <Image
-                src="/assets/images/integrantes/ezequiel.png"
-                width={180}
-                height={180}
-                alt="Logo"
-              />
-              <p className="text-green-500 mt-2">Ezequiel Hellwig</p>
-              <p>rm0000</p>
+              src="/assets/images/integrantes/ezequiel.png"
+              width={180}
+              height={180}
+              alt="Logo"
+            />
+            <p className="text-green-500 mt-2">Ezequiel Hellwig</p>
+            <p>rm0000</p>
           </div>
           <div id="integrante" className="text-center">
             <Image
-                src="/assets/images/integrantes/guilherme.png"
-                width={180}
-                height={180}
-                alt="Logo"
-              />
-              <p className="text-green-500 mt-2">Guilherme Carneiro</p>
-              <p>rm0000</p>
+              src="/assets/images/integrantes/guilherme.png"
+              width={180}
+              height={180}
+              alt="Logo"
+            />
+            <p className="text-green-500 mt-2">Guilherme Carneiro</p>
+            <p>rm0000</p>
           </div>
           <div id="integrante" className="text-center">
             <Image
-                src="/assets/images/integrantes/kevin.png"
-                width={180}
-                height={180}
-                alt="Logo"
-              />
-              <p className="text-green-500 mt-2">Kevin Benevides</p>
-              <p>rm0000</p>
+              src="/assets/images/integrantes/kevin.png"
+              width={180}
+              height={180}
+              alt="Logo"
+            />
+            <p className="text-green-500 mt-2">Kevin Benevides</p>
+            <p>rm0000</p>
           </div>
           <div id="integrante" className="text-center">
             <Image
-                src="/assets/images/integrantes/pedro.png"
-                width={180}
-                height={180}
-                alt="Logo"
-              />
-              <p className="text-green-500 mt-2">Pedro de Freitas</p>
-              <p>rm0000</p>
+              src="/assets/images/integrantes/pedro.png"
+              width={180}
+              height={180}
+              alt="Logo"
+            />
+            <p className="text-green-500 mt-2">Pedro de Freitas</p>
+            <p>rm0000</p>
           </div>
         </div>
       </section>

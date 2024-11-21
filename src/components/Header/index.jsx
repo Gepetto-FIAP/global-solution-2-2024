@@ -5,22 +5,25 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLogin } from "@/hooks/useLogin";
 export function Header() {
-  const { LogoutBusiness, LogoutOng, isBusinessLoggedIn, isOngLoggedIn } =
-    useLogin();
+  const {
+    LogoutBusiness,
+    LogoutEstabelecimento,
+    isBusinessLoggedIn,
+    isOngLoggedIn,
+  } = useLogin();
   const pathname = usePathname();
 
   const handleLogout = () => {
-    if (isBusinessLoggedIn && pathname === "/dashboard-estabelecimento") {
+    if (isBusinessLoggedIn && pathname === "/dashboard-descartante") {
       LogoutBusiness();
-    } else if (isOngLoggedIn && pathname === "/dashboard-ong") {
-      LogoutOng();
+    } else if (isOngLoggedIn && pathname === "/dashboard-estabelecimento") {
+      LogoutEstabelecimento();
     }
   };
 
   return (
     <nav className="w-full py-4 bg-black">
       <div className="container mx-auto flex items-center justify-between">
-        
         <Link href="/dashboard-estabelecimento">
           <Image
             src="/assets/images/avatar.svg"
@@ -38,8 +41,7 @@ export function Header() {
             alt="Fome Zero"
           />
         </Link>
-      
-        
+
         <Link href="/">
           <Image
             src="/assets/images/logout.svg"
@@ -49,7 +51,6 @@ export function Header() {
             alt="Sair"
           />
         </Link>
-      
       </div>
     </nav>
   );

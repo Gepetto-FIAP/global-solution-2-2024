@@ -62,7 +62,7 @@ export default function LoginProvider({ children }) {
     return true;
   }
 
-  function LoginOng(email, password) {
+  function LoginEstabelecimento(email, password) {
     const { getItem } = useLocalStorage("ongs");
     const { setItem } = useLocalStorage("ongLogged");
     const ongsList = getItem() || [];
@@ -79,7 +79,7 @@ export default function LoginProvider({ children }) {
     return true;
   }
 
-  function LogoutOng() {
+  function LogoutEstabelecimento() {
     const { removeItem } = useLocalStorage("ongLogged");
 
     setIsOngLoggedIn(false);
@@ -152,8 +152,8 @@ export default function LoginProvider({ children }) {
         LoginBusiness,
         LogoutBusiness,
         RegisterBusiness,
-        LoginOng,
-        LogoutOng,
+        LoginEstabelecimento,
+        LogoutEstabelecimento,
         RegisterOng,
       }}
     >

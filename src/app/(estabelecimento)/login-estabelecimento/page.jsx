@@ -1,28 +1,22 @@
-"use client"
-import React, { useState } from "react";
-import LoginEstabelecimentoView from "./view";
-import { useLocalStorage } from "@/hooks/useLocalStorage";
+"use client";
 import { useLogin } from "@/hooks/useLogin";
+import LoginEstabelecimentoView from "./view";
+import { useState } from "react";
 
 export default function LoginEstabelecimento() {
-  const { LoginBusiness } = useLogin();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const { getItem } = useLocalStorage("businessLogged");
- 
+  const { LoginEstabelecimento } = useLogin();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = (event) => {
     event.preventDefault();
-    
-    const logged = LoginBusiness(email, password);
-    
+    const logged = LoginEstabelecimento(email, password);
+
     if (logged) {
-      const business = getItem();
-      alert(`Seja bem-vindo de volta, ${business.fantasyName}!`);
+      alert(`Seja bem-vindo!`);
       window.location.href = "/dashboard-estabelecimento";
     }
-  }
-
+  };
   return (
     <LoginEstabelecimentoView
       handleLogin={handleLogin}

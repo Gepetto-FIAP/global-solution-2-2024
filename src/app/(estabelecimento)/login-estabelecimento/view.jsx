@@ -1,9 +1,8 @@
-import React from "react";
 import Image from "next/image";
 import photo from "@/public/assets/images/login-estabelecimento.jpg";
 import Link from "next/link";
-import { Button } from "@/components/Button";
 import { Input } from "@/components/Input";
+import { Button } from "@/components/Button";
 
 export default function LoginEstabelecimentoView({
   handleLogin,
@@ -11,25 +10,25 @@ export default function LoginEstabelecimentoView({
   setPassword,
 }) {
   return (
-    <div className="grid grid-cols-2 bg-[#191919] font-nunito-sans">
+    <div className="grid grid-cols-2 items-stretch overflow-hidden  font-nunito-sans">
       <Image
         src={photo}
         alt="Login Helper Image"
         className="h-screen w-full object-cover"
         priority
       />
-      <div id="login-card" className="flex items-center justify-center">
-        <div className="bg-white rounded-lg w-[488px] flex flex-col p-[36px] text-black max-h-[90vh] overflow-auto">
+
+      <div className="flex items-center justify-center text-[#191919] bg-[#191919]">
+        <div className="bg-white rounded-lg w-[488px] flex flex-col p-[36px] max-h-[90vh] overflow-auto">
           <Link
             href="/"
             className="font-semibold text-sm text-gray-700 -mt-4 mb-4"
           >
             &lt; Voltar
           </Link>
-          <h1 className="text-4xl mb-4 font-bold">
-            Conta para descartar
-          </h1>
-          <form className="flex flex-col" onSubmit={handleLogin}>
+          <h1 className="text-4xl mb-6 font-bold">Área do estabelecimento</h1>
+
+          <form className="w-full flex flex-col" onSubmit={handleLogin}>
             <Input
               required
               label="E-mail"
@@ -37,9 +36,9 @@ export default function LoginEstabelecimentoView({
               name="email"
               id="email"
               onChange={(e) => setEmail(e.target.value)}
-              className="border border-solid rounded-sm p-[16px] mb-[24px]"
               placeholder="Insira seu e-mail"
             />
+
             <Input
               required
               label="Senha"
@@ -47,9 +46,9 @@ export default function LoginEstabelecimentoView({
               name="password"
               id="password"
               onChange={(e) => setPassword(e.target.value)}
-              className="border border-solid rounded-sm p-[16px] mb-[24px]"
               placeholder="Insira sua senha"
             />
+
             <div className="flex flex-row justify-end items-center my-4">
               <svg
                 svg="true"
@@ -68,6 +67,7 @@ export default function LoginEstabelecimentoView({
                 Esqueci minha senha
               </a>
             </div>
+
             <Button
               type="submit"
               text="Entrar"
