@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import LoginEstabelecimentoView from "./view";
+import LoginDescartanteView from "./view";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { useLogin } from "@/hooks/useLogin";
 
-export default function LoginEstabelecimento() {
+export default function LoginDescartante() {
   const { LoginBusiness } = useLogin();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,7 +23,7 @@ export default function LoginEstabelecimento() {
   };
 
   return (
-    <LoginEstabelecimentoView
+    <LoginDescartanteView
       handleLogin={handleLogin}
       setEmail={setEmail}
       setPassword={setPassword}

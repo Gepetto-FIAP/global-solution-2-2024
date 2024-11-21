@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Input } from "@/components/Input";
 
-export default function LoginEstabelecimentoView({
+export default function LoginDescartanteView({
   handleLogin,
   setEmail,
   setPassword,

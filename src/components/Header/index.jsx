@@ -5,15 +5,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLogin } from "@/hooks/useLogin";
 export function Header() {
-  const { LogoutBusiness, LogoutOng, isBusinessLoggedIn, isOngLoggedIn } =
-    useLogin();
+  const {
+    LogoutBusiness,
+    LogoutEstabelecimento,
+    isBusinessLoggedIn,
+    isOngLoggedIn,
+  } = useLogin();
   const pathname = usePathname();
 
   const handleLogout = () => {
     if (isBusinessLoggedIn && pathname === "/dashboard-descartante") {
       LogoutBusiness();
     } else if (isOngLoggedIn && pathname === "/dashboard-estabelecimento") {
-      LogoutOng();
+      LogoutEstabelecimento();
     }
   };
 

@@ -4,12 +4,16 @@ import Link from "next/link";
 import { Input } from "@/components/Input";
 import { Button } from "@/components/Button";
 
-export default function LoginOngView({ handleLogin, setEmail, setPassword }) {
+export default function LoginEstabelecimentoView({
+  handleLogin,
+  setEmail,
+  setPassword,
+}) {
   return (
     <div className="grid grid-cols-2 items-stretch overflow-hidden  font-nunito-sans">
       <Image
         src={photo}
-        alt="Login Ong Image"
+        alt="Login Helper Image"
         className="h-screen w-full object-cover"
         priority
       />

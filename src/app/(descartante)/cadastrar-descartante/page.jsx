@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import CadastrarDescartanteView from "./view";
 import { useLogin } from "@/hooks/useLogin";
 
-export default function CadastrarEstabelecimento() {
+export default function CadastrarDescartante() {
   const { RegisterBusiness } = useLogin();
   const [institution, setInstitution] = useState({
     fantasyName: "",
