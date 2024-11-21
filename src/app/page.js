@@ -9,7 +9,9 @@ import { useLogin } from "@/hooks/useLogin";
 
 export default function LandingPage() {
   const { isBusinessLoggedIn, isOngLoggedIn } = useLogin();
-  const doarRef = isBusinessLoggedIn ? "/dashboard-estabelecimento" : "/login-estabelecimento";
+  const doarRef = isBusinessLoggedIn
+    ? "/dashboard-estabelecimento"
+    : "/login-descartante";
   const ongRef = isOngLoggedIn ? "/dashboard-ong" : "/login-ong";
 
   return (
@@ -40,11 +42,12 @@ export default function LandingPage() {
         <div className="container mx-auto text-left py-20 text-white relative z-10">
           <h2 className="text-6xl font-bold mb-4 max-w-[728px]">
             Ache o local certo!{" "}
-            <span className="text-[#00DF3F]">Descarte baterias:</span>{" "}
-            Poupe o meio ambiente
+            <span className="text-[#00DF3F]">Descarte baterias:</span> Poupe o
+            meio ambiente
           </h2>
           <p className="text-lg mb-8 max-w-[728px]">
-            Encontramos o local ideal para você descartar ou vender suas baterias, desde uma simples pilha até baterias de carros elétricos.
+            Encontramos o local ideal para você descartar ou vender suas
+            baterias, desde uma simples pilha até baterias de carros elétricos.
           </p>
           <div className="flex flex-row gap-4">
             <Link href={doarRef}>

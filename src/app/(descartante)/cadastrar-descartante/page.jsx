@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import CadastrarEstabelecimentoView from "./view";
+import CadastrarDescartanteView from "./view";
 import { useLogin } from "@/hooks/useLogin";
 
 export default function CadastrarEstabelecimento() {
@@ -36,7 +36,7 @@ export default function CadastrarEstabelecimento() {
     }
   };
   return (
-    <CadastrarEstabelecimentoView
+    <CadastrarDescartanteView
       handleRegister={handleRegister}
       institution={institution}
       setInstitution={setInstitution}

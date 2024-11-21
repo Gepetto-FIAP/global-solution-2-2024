@@ -1,5 +1,5 @@
 import Image from "next/image";
-import photo from "@/public/assets/images/register-wallpaper.png";
+import photo from "@/public/assets/images/login-wallpaper-descarte.png";
 import Link from "next/link";
 import React from "react";
 import { Button } from "@/components/Button";
@@ -24,7 +24,7 @@ export default function CadastrarEstabelecimentoView({
           <h1 className="text-4xl mb-4 font-bold">
             Cadastrar
             <br />
-            estabelecimento
+            descartante
           </h1>
           <form className="flex flex-col" onSubmit={handleRegister}>
             <Input
@@ -49,7 +49,7 @@ export default function CadastrarEstabelecimentoView({
             />
 
             <Select
-              label="Tipo de estabelecimento"
+              label="Tipo de descarte"
               id="tipo-estabelecimento"
               required
               value={institution.type}
@@ -58,10 +58,10 @@ export default function CadastrarEstabelecimentoView({
               }
             >
               <option value="" disabled hidden>
-                Selecione um tipo de alimento
+                Selecione um tipo de descarte
               </option>
-              <option value="mercado">Mercado</option>
-              <option value="restaurante">Restaurante</option>
+              <option value="mercado">Eletrônico</option>
+              <option value="restaurante">Baterias</option>
               <option value="outro">Outro</option>
             </Select>
 
