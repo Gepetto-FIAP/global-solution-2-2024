@@ -23,7 +23,7 @@ const Doar = () => {
       <main className="flex-1">
         <div className="pt-14 flex flex-col items-center bg-white w-full h-full">
           <h1 className="text-black text-4xl font-bold">{ong.name}</h1>
-          <p className="text-black text-xl pb-12 pt-4">Lista de Doações</p>
+          <p className="text-black text-xl pb-12 pt-4">Lista de Descartes</p>
 
           <table className="w-4/5">
             <thead>
@@ -63,7 +63,7 @@ const Doar = () => {
               ) : (
                 <tr className="text-center text-2xl text-gray-500 font-semibold">
                   <td colSpan="5" className="pt-5">
-                    Nenhuma doação recebida! 😥
+                    Nenhum descarte recebido! 😥
                   </td>
                 </tr>
               )}

@@ -107,7 +107,7 @@ export default function ViewDonationModal({ isOpen, onClose, donationID }) {
 
         <div className="mb-4">
           <label className="block text-sm font-semibold text-black mb-1">
-            Horário da doação
+            Horário do descarte
           </label>
           <div className="flex space-x-2">
             <input

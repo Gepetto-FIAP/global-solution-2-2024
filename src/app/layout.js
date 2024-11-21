@@ -16,7 +16,7 @@ const leagueGothic = localFont({
 });
 
 export const metadata = {
-  title: "Fome Zero",
+  title: "Safe Battery",
   description: "Fome Zero",
 };
 
