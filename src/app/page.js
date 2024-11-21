@@ -84,10 +84,10 @@ export default function LandingPage() {
               src="/assets/images/integrantes/antonio.png"
               width={180}
               height={180}
-              alt="Logo"
+              alt="Antonio"
             />
             <p className="text-green-500 mt-2">Antônio Schappo</p>
-            <p>rm0000</p>
+            <p>RM: 556429</p>
           </div>
           <div id="integrante" className="text-center">
             <Image
@@ -97,7 +97,7 @@ export default function LandingPage() {
               alt="Logo"
             />
             <p className="text-green-500 mt-2">Ezequiel Hellwig</p>
-            <p>rm0000</p>
+            <p>RM: 555455</p>
           </div>
           <div id="integrante" className="text-center">
             <Image
@@ -107,7 +107,7 @@ export default function LandingPage() {
               alt="Logo"
             />
             <p className="text-green-500 mt-2">Guilherme Carneiro</p>
-            <p>rm0000</p>
+            <p>RM: 557517</p>
           </div>
           <div id="integrante" className="text-center">
             <Image
@@ -117,7 +117,7 @@ export default function LandingPage() {
               alt="Logo"
             />
             <p className="text-green-500 mt-2">Kevin Benevides</p>
-            <p>rm0000</p>
+            <p>RM: 557898</p>
           </div>
           <div id="integrante" className="text-center">
             <Image
@@ -127,7 +127,7 @@ export default function LandingPage() {
               alt="Logo"
             />
             <p className="text-green-500 mt-2">Pedro de Freitas</p>
-            <p>rm0000</p>
+            <p>RM: 555907</p>
           </div>
         </div>
       </section>

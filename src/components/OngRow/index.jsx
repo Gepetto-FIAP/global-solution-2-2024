@@ -3,7 +3,7 @@ export function OngRow({ ongName, ongEmail, ...props }) {
     <label className="flex items-start space-x-2">
       <input
         type="radio"
-        className="mt-1 h-4 w-4 text-orange-500 focus:ring-orange-400"
+        className="mt-1 h-4 w-4 text-green-500 focus:ring-green-400"
         name="ong"
         value={ongName}
         {...props}
