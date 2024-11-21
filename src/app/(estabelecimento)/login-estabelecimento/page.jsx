@@ -14,7 +14,7 @@ export default function LoginOng() {
 
     if (logged) {
       alert(`Seja bem-vindo!`);
-      window.location.href = "/dashboard-ong";
+      window.location.href = "/dashboard-estabelecimento";
     }
   };
   return (

@@ -1,43 +1,29 @@
 "use client";
 
-import { useState } from "react";
-import ONGListModal from "./components/ONGListModal";
-import ViewDonationModal from "./components/viewDonationModal";
-import { TableRow } from "@/components/TableRow";
-import { CreateDonation } from "@/components/Modals/CreateDonation";
+import { useEffect, useState } from "react";
+import ViewDonationONG from "./components/viewDonationONG";
+import UpdateDonation from "./components/updateDonation";
+import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { useDonate } from "@/hooks/useDonate";
-import { Button } from "@/components/Button";
+import { OngTableRow } from "@/components/OngTableRow";
 import { useLogin } from "@/hooks/useLogin";
 
 const Doar = () => {
-  const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
-  const [isONGListModalOpen, setIsONGListModalOpen] = useState(false);
-  const [isViewDonationModal, setIsViewDonationModal] = useState(false);
+  const [isViewDonationONG, setIsViewDonationONG] = useState(false);
   const [isViewDonationId, setIsViewDonationId] = useState("");
+  const [isUpdateDonation, setUpdateDonation] = useState(false);
+  const [isUpdateDonationId, setIsUpdateDonationId] = useState("");
 
-  const { business } = useLogin();
-
-  const { GetDonationsByCompany } = useDonate();
-  const allDonations = GetDonationsByCompany(business.cnpj);
-
-  const toggleList = () => {
-    setIsDonationModalOpen(false);
-    setIsONGListModalOpen(true);
-  };
-
-  const registerNewDonation = () => {
-    setIsDonationModalOpen(true);
-    setIsONGListModalOpen(false);
-  };
+  const { ong } = useLogin();
+  const { GetDonationsByOng } = useDonate();
+  const allDonations = GetDonationsByOng(ong.id);
 
   return (
     <div className="h-screen overflow-y-auto flex flex-col justify-between relative">
       <main className="flex-1">
         <div className="pt-14 flex flex-col items-center bg-white w-full h-full">
-          <h1 className="text-black text-4xl font-bold">
-            {business.fantasyName}
-          </h1>
-          <p className="text-black text-xl pb-12 pt-4">Lista de Descartes</p>
+          <h1 className="text-black text-4xl font-bold">{ong.name}</h1>
+          <p className="text-black text-xl pb-12 pt-4">Lista de Doações</p>
 
           <table className="w-4/5">
             <thead>
@@ -46,60 +32,53 @@ const Doar = () => {
                   STATUS
                 </th>
                 <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm font-semibold text-black">
-                  INFORMAÇÕES DO ESTABELECIMENTO
+                  DESCARTANTE
                 </th>
                 <th className="px-6 py-3 border-b-2 border-gray-300 text-left text-sm font-semibold text-black">
-                  SOBRE O DESCARTE
+                  SOBRE A DOAÇÃO
                 </th>
-                <th className="py-3 border-b-2 border-gray-300 text-right text-sm font-semibold">
-                  <Button
-                    onClick={() => setIsDonationModalOpen(true)}
-                    text="Novo Descarte"
-                    className="-mr-[2px]"
-                  />
-                </th>
+                <th className="px-6 py-3 border-b-2 border-gray-300"></th>
               </tr>
             </thead>
             <tbody>
               {allDonations.length > 0 ? (
                 allDonations.map((donation) => (
-                  <TableRow
+                  <OngTableRow
                     key={donation.donationID}
                     status={donation.status}
-                    ongName={donation.ongName}
-                    ongEmail={donation.ongEmail}
+                    companyName={donation.companyName}
+                    companyPhone={donation.companyPhone}
+                    companyAddress={donation.companyAddress}
+                    items={donation.items}
                     type={donation.type}
                     data={donation.data}
                     time={donation.time}
                     donationID={donation.donationID}
-                    setIsViewDonationModal={setIsViewDonationModal}
+                    setIsViewDonationModal={setIsViewDonationONG}
                     setIsViewDonationId={setIsViewDonationId}
+                    setIsUpdateDonationModal={setUpdateDonation}
+                    setIsUpdateDonationId={setIsUpdateDonationId}
                   />
                 ))
               ) : (
                 <tr className="text-center text-2xl text-gray-500 font-semibold">
                   <td colSpan="5" className="pt-5">
-                    Nenhum descarte cadastrado! 😥
+                    Nenhuma doação recebida! 😥
                   </td>
                 </tr>
               )}
             </tbody>
           </table>
         </div>
-        <CreateDonation
-          isOpen={isDonationModalOpen}
-          onClose={() => setIsDonationModalOpen(false)}
-          toggleList={toggleList}
-        />
-        <ONGListModal
-          isOpen={isONGListModalOpen}
-          onClose={() => setIsONGListModalOpen(false)}
-          toggleDonation={registerNewDonation}
-        />
-        <ViewDonationModal
-          isOpen={isViewDonationModal}
+        <ViewDonationONG
+          isOpen={isViewDonationONG}
+          onClose={() => setIsViewDonationONG(false)}
           donationID={isViewDonationId}
-          onClose={() => setIsViewDonationModal(false)}
+        />
+        <UpdateDonation
+          isOpen={isUpdateDonation}
+          onClose={() => setUpdateDonation(false)}
+          donationID={isUpdateDonationId}
         />
       </main>
     </div>

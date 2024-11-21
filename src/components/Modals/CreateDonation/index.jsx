@@ -8,8 +8,6 @@ import { useDonate } from "@/hooks/useDonate";
 export function CreateDonation({ isOpen, onClose, toggleList }) {
   const { createdDonation, setCreatedDonation } = useDonate();
 
-  console.log(createdDonation);
-
   const handleToggleList = () => {
     if (!createdDonation.type) {
       return alert("Selecione o tipo de bateria para continuar");
@@ -62,15 +60,9 @@ export function CreateDonation({ isOpen, onClose, toggleList }) {
                   <option defaultValue="" disabled selected hidden>
                     Selecione o tipo de bateria
                   </option>
-                  <option value="perecivel">
-                    Somente pilhas
-                  </option>
-                  <option value="nao-perecivel">
-                    Bateria mais complexas
-                  </option>
-                  <option value="ambos">
-                    Todo e qualquer tipo de bateria
-                  </option>
+                  <option value="perecivel">Somente pilhas</option>
+                  <option value="nao-perecivel">Bateria mais complexas</option>
+                  <option value="ambos">Todo e qualquer tipo de bateria</option>
                 </Select>
               </div>
             </div>

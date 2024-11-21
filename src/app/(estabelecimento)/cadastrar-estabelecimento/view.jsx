@@ -117,7 +117,7 @@ export default function CadastrarEstabelecimentoView({
           </form>
           <p className="text-center mt-4">
             Já possui uma conta?{" "}
-            <Link href="/login-descartante">
+            <Link href="/login-estabelecimento">
               <span className="font-bold underline">Faça login</span>
             </Link>
           </p>

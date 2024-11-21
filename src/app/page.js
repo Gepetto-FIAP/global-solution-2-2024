@@ -10,9 +10,11 @@ import { useLogin } from "@/hooks/useLogin";
 export default function LandingPage() {
   const { isBusinessLoggedIn, isOngLoggedIn } = useLogin();
   const doarRef = isBusinessLoggedIn
-    ? "/dashboard-estabelecimento"
+    ? "/dashboard-descartante"
     : "/login-descartante";
-  const ongRef = isOngLoggedIn ? "/dashboard-ong" : "/login-ong";
+  const ongRef = isOngLoggedIn
+    ? "/dashboard-estabelecimento"
+    : "/login-estabelecimento";
 
   return (
     <div className="h-screen w-screen overflow-y-auto flex flex-col justify-between relative">
