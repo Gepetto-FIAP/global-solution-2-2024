@@ -22,15 +22,15 @@ export default function CadastrarEstabelecimentoView({
             &lt; Voltar
           </Link>
           <h1 className="text-4xl mb-4 font-bold">
-            Cadastrar
+            Conta para
             <br />
-            descartante
+            Descartar baterias
           </h1>
           <form className="flex flex-col" onSubmit={handleRegister}>
             <Input
-              label="Nome fantasia"
+              label="Nome"
               id="nome-fantasia"
-              placeholder="Insira o nome fantasia"
+              placeholder="Insira o nome"
               required
               onChange={(e) =>
                 setInstitution({ ...institution, fantasyName: e.target.value })
@@ -38,32 +38,15 @@ export default function CadastrarEstabelecimentoView({
             />
 
             <Input
-              label="CNPJ"
+              label="CPF"
               id="cnpj"
-              mask="99.999.999/9999-99"
-              placeholder="Insira o CPNJ"
+              mask="999.999.999-99"
+              placeholder="Insira o CPF"
               required
               onChange={(e) =>
                 setInstitution({ ...institution, cnpj: e.target.value })
               }
             />
-
-            <Select
-              label="Tipo de descarte"
-              id="tipo-estabelecimento"
-              required
-              value={institution.type}
-              onChange={(e) =>
-                setInstitution({ ...institution, type: e.target.value })
-              }
-            >
-              <option value="" disabled hidden>
-                Selecione um tipo de descarte
-              </option>
-              <option value="mercado">Eletrônico</option>
-              <option value="restaurante">Baterias</option>
-              <option value="outro">Outro</option>
-            </Select>
 
             <Input
               label="Telefone"

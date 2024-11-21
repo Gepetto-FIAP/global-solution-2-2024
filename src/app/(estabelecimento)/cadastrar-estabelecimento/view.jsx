@@ -75,8 +75,8 @@ export default function CadastrarEstabelecimentoView({
               <option value="" disabled hidden>
                 Selecione o tipo de estabelecimento
               </option>
-              <option value="mercado">Bateria de Lítio</option>
-              <option value="restaurante">Bateria de Chumbo</option>
+              <option value="mercado">Posto de Gasolina</option>
+              <option value="restaurante">Loja</option>
               <option value="outro">Outro</option>
             </Select>
 

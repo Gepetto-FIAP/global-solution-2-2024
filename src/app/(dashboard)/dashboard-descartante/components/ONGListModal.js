@@ -35,7 +35,7 @@ export default function ONGListModal({ isOpen, onClose, toggleDonation }) {
           &times;
         </button>
         <div className="flex w-full justify-center items-center">
-          <h2 className="text-xl font-bold text-orange-600">Lista de ONGs</h2>
+          <h2 className="text-xl font-bold text-green-600">Lista de Estabelecimentos</h2>
         </div>
 
         <div className="mt-8 space-y-4">
@@ -62,14 +62,14 @@ export default function ONGListModal({ isOpen, onClose, toggleDonation }) {
 
         <div className="mt-6 flex justify-between">
           <Button
-            className="text-orange-600 font-semibold px-8 border-orange-600 border-2 py-2 rounded hover:bg-gray-200"
+            className="text-green-600 font-semibold px-8 border-green-600 border-2 py-2 rounded hover:bg-gray-200"
             onClick={toggleDonation}
             text="Voltar"
             variant="outline"
           />
           <Button
             onClick={() => createDonation()}
-            className="bg-orange-500 text-white py-2 font-bold px-8 rounded hover:bg-orange-600"
+            className="bg-green-500 text-white py-2 font-bold px-8 rounded hover:bg-green-600"
             text="Solicitar Doação"
           />
         </div>
