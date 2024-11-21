@@ -95,11 +95,9 @@ export default function LoginProvider({ children }) {
     const { getItem, setItem } = useLocalStorage("ongs");
     const ongsLits = getItem() || [];
 
-    const cpfAlreadyRegistred = ongsLits.find(
-      (o) => o.cpfResponsible === ong.cpfResponsible
-    );
-    if (cpfAlreadyRegistred) {
-      alert("CPF já cadastrado");
+    const cnpjAlreadyRegistred = ongsLits.find((o) => o.cnpj === ong.cnpj);
+    if (cnpjAlreadyRegistred) {
+      alert("CNPJ já cadastrado");
       return;
     }
 

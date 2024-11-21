@@ -28,12 +28,27 @@ export default function CadastrarEstabelecimentoView({
           </h1>
           <form className="flex flex-col" onSubmit={handleRegister}>
             <Input
-              label="Nome fantasia"
-              id="nome-fantasia"
-              placeholder="Insira o nome fantasia"
+              label="Nome do estabelecimento"
+              id="nome-estabelecimento"
+              placeholder="Insira o nome do estabelecimento"
               required
               onChange={(e) =>
-                setInstitution({ ...institution, fantasyName: e.target.value })
+                setInstitution({ ...institution, name: e.target.value })
+              }
+            />
+
+            <Input
+              required
+              label="Nome do Responsável"
+              type="text"
+              name="nome-responsavel"
+              id="nome-responsavel"
+              placeholder="Insira o nome do Responsável"
+              onChange={(e) =>
+                setInstitution({
+                  ...institution,
+                  nameReponsible: e.target.value,
+                })
               }
             />
 
@@ -58,33 +73,12 @@ export default function CadastrarEstabelecimentoView({
               }
             >
               <option value="" disabled hidden>
-                Selecione um tipo de alimento
+                Selecione o tipo de estabelecimento
               </option>
-              <option value="mercado">Mercado</option>
-              <option value="restaurante">Restaurante</option>
+              <option value="mercado">Bateria de Lítio</option>
+              <option value="restaurante">Bateria de Chumbo</option>
               <option value="outro">Outro</option>
             </Select>
-
-            <Input
-              label="Telefone"
-              id="telefone"
-              mask="(99) 99999-9999"
-              placeholder="Insira seu telefone"
-              required
-              onChange={(e) =>
-                setInstitution({ ...institution, phone: e.target.value })
-              }
-            />
-
-            <Input
-              label="Endereço"
-              id="endereco"
-              placeholder="Insira seu endereço"
-              required
-              onChange={(e) =>
-                setInstitution({ ...institution, address: e.target.value })
-              }
-            />
 
             <Input
               label="E-mail"
